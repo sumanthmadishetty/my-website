@@ -1,6 +1,7 @@
 import React, { Children } from "react";
-import TopBar from "../Containers/First";
-import Sidebar from "./Sidebar";
+
+const TopBar = React.lazy(() => import("../Containers/First"));
+const Sidebar = React.lazy(() => import("./Sidebar"));
 
 export default function Layout(props) {
   return (

@@ -1,13 +1,19 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Layout from "./Components/Layout";
+import SuspenseFallback from "./Components/SuspenseFallback";
+
+const Layout = React.lazy(() => import("./Components/Layout"));
 
 function App() {
   return (
-    <div className="App">
-      <Layout></Layout>
-    </div>
+    <React.Suspense fallback={<SuspenseFallback />}>
+      <div className="App">
+        <Layout>
+          <div>ABout me</div>
+        </Layout>
+      </div>
+    </React.Suspense>
   );
 }
 
