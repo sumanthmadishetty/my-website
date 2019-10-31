@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -19,4 +20,45 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: auto;
+}
+
+.sideBarItemContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 30%;
+  cursor: pointer;
+  height: 60px;
+}
+
+.sideBarItemContainer > div {
+  font-style: italic;
+  margin: 5px;
+}
+
+.sideBarItemContainer:hover {
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px grey;
+}
+
+.sideBarItemContainer:hover > div {
+  color: black;
+}
+
+@media (max-width: 800px) {
+  .sideBarItemContainer > div {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .sideBarItemContainer > div {
+    font-size: 14px;
+  }
 }
