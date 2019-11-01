@@ -42,12 +42,14 @@ body,
   margin: 5px;
 }
 
-.sideBarItemContainer:hover {
+.sideBarItemContainer:hover,
+.sideBarItemSelected {
   background-color: white;
   box-shadow: 2px 2px 2px 2px grey;
 }
 
-.sideBarItemContainer:hover > div {
+.sideBarItemContainer:hover,
+.sideBarItemSelected > div {
   color: black;
 }
 
@@ -61,4 +63,13 @@ body,
   .sideBarItemContainer > div {
     font-size: 14px;
   }
+}
+.notFoundContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 35px;
+  font-style: italic;
 }
