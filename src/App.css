@@ -73,3 +73,25 @@ body,
   font-size: 35px;
   font-style: italic;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
+
+/* @font-face {
+  font-family: NeoSansStd;
+  src: url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.eot');
+  src: url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.woff2') format('woff2'),
+    url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.woff') format('woff'),
+    url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.ttf') format('truetype'),
+    url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.svg#Neo Sans Std') format('svg');
+} */

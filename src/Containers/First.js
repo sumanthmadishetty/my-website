@@ -3,6 +3,10 @@ import IconButton from "@material-ui/core/IconButton";
 import Badge from "@material-ui/core/Badge";
 import GithubIcon from "../assets/githubIcon.png";
 import stackOverflow from "../assets/stackOverflow.png";
+import MyPhoto from "../assets/myPhoto.JPG";
+
+import mainBackground from "../assets/mainBackground.jpg";
+
 // import NotificationsIcon from "@material-ui/icons/Notifications";
 // This container should contain
 // 1.Sidebar with links(Education, Projects, Contact me etc);
@@ -10,11 +14,10 @@ import stackOverflow from "../assets/stackOverflow.png";
 
 const styles = {
   topbarContainer: {
-    height: "100px",
-    backgroundColor: "black",
-    display: "flex",
-    color: "white",
-    width: "100%"
+    backgroundImage: `url(${mainBackground})`,
+    // display: "flex",
+    width: "100%",
+    height: "100%"
     // alignItems: "center"
     // justifyContent: "space-between"
   },
@@ -23,32 +26,77 @@ const styles = {
 
 function TopBar() {
   return (
-    <div>
-      <div id="Topbar" style={styles.topbarContainer}>
-        <div
-          style={{
-            fontSize: "50px",
-            justifySelf: "center",
-            alignSelf: "center",
-            width: "100%"
-          }}
-        >
-          Sumanth Madishetty
-        </div>
+    // <div>
+    <div id="Topbar" style={styles.topbarContainer} className="topBarContainer">
+      <div
+        style={{
+          backgroundColor: "rgba(0,0,0,0.5)",
+          height: "100%",
+          display: "grid",
+          gridTemplateRows: "100px auto"
+        }}
+      >
         <div
           style={{
             float: "right",
             display: "flex",
-            alignSelf: "center",
-            marginRight: "15px"
+            justifySelf: "right",
+            gridRow: "1"
           }}
         >
           <CustomIconButton icon={GithubIcon} />
           <CustomIconButton icon={stackOverflow} />
         </div>
+        <div
+          style={{
+            fontSize: "50px",
+            justifySelf: "center",
+            alignSelf: "center",
+            width: "100%",
+            gridRow: "2"
+          }}
+        >
+          {/* {renderPersonalImage()} */}
+          <div
+            style={{ display: "flex", flexDirection: "column", color: "white" }}
+          >
+            <div
+              id="titleHeaidng"
+              style={{ fontSize: "35px" }}
+            >{`Hie & Welcome`}</div>
+            <div
+              id="titleHeaidng"
+              style={{ fontSize: "55px", fontWeight: "bolder" }}
+            >
+              I am Sumanth Madishetty
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
+
+  function renderPersonalImage() {
+    return (
+      <div
+        style={{
+          borderRadius: "100px",
+          width: "120px",
+          height: "120px",
+          backgroundColor: "white",
+          display: "inline-flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <img
+          style={{ width: "110px", height: "110px", borderRadius: "100px" }}
+          src={MyPhoto}
+          alt="myPhot"
+        />
+      </div>
+    );
+  }
 }
 
 function CustomIconButton({ icon, onClick }) {

@@ -11,7 +11,8 @@ export default function Layout(props) {
         return (
           <div style={{ height: "100%" }}>
             <TopBar location={location} />
-            <div
+            <div id="asd">The next content goes herer</div>
+            {/* <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 10fr",
@@ -20,7 +21,7 @@ export default function Layout(props) {
             >
               <Sidebar location={location} />
               {props.children}
-            </div>
+            </div> */}
           </div>
         );
       }}
