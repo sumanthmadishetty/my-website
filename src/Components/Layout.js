@@ -1,10 +1,43 @@
 import React, { Children } from "react";
 import { Grid } from "@material-ui/core";
 import { Location } from "@reach/router";
-import GithubIcon from "../assets/githubIcon.png";
+import {
+  githubLogo,
+  calendar,
+  mobileIcon,
+  locationPin,
+  envelope,
+  linkedinBlack,
+  linkedinWhite
+} from "assets/Images";
+import translations from "config/translations";
+import Fade from "react-reveal/Fade";
 
 const TopBar = React.lazy(() => import("../Containers/First"));
 const Sidebar = React.lazy(() => import("./Sidebar"));
+
+const DATA = [
+  {
+    icon: envelope,
+    title: "Email: ",
+    value: "sumanth5812@gmail.com"
+  },
+  {
+    icon: calendar,
+    title: "Date of Birth: ",
+    value: "21-08-1996"
+  },
+  {
+    icon: locationPin,
+    title: "Location: ",
+    value: "Hyderbad, India"
+  },
+  {
+    icon: mobileIcon,
+    title: "Mobile: ",
+    value: "+91-8099211177"
+  }
+];
 
 export default function Layout(props) {
   return (
@@ -24,62 +57,131 @@ export default function Layout(props) {
 
   function renderMore() {
     return (
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 3fr 3fr 1fr",
-          paddingTop: "20px",
-          paddingBottom: "20px",
-          height: "400px"
-        }}
-      >
+      <Fade big cascade>
         <div
           style={{
-            gridColumn: "2/3",
-            height: "400px",
-
             display: "grid",
-            gridTemplateRows: "2fr 3fr 2fr 1fr"
+            gridTemplateColumns: "1fr 3fr 3fr 1fr",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+            height: "400px"
           }}
         >
           <div
             style={{
-              gridRow: "1/2",
-              display: "flex",
-              alignItems: "center"
-            }}
-          >
-            <h1>Hi there, I am Sumanth Madishetty</h1>
-          </div>
-          <div style={{ gridRow: "2/3" }}>
-            I am a professional web designer from Manchester, England. I create
-            beautiful professional websites using best practice accessibility. I
-            enjoy turning complex problems into simple, beautiful and intuitive
-            interface designs
-          </div>
-          <div id="personal Details" style={{ gridRow: "3/4" }}>
-            Email: Sumanth5812@gmail.com Email: Sumanth5812@gmail.com Email:
-            Sumanth5812@gmail.com Email: Sumanth5812@gmail.com
-          </div>
-          <div id="social details" style={{ gridRow: "4/5" }}>
-            <img src={GithubIcon} alt="asd" />
-            <img src={GithubIcon} alt="asd" />
-            <img src={GithubIcon} alt="asd" />
-            <img src={GithubIcon} alt="asd" />
-          </div>
-        </div>
+              gridColumn: "2/3",
+              height: "400px",
 
-        <div style={{ display: "grid", gridColumn: "3/4" }}>
-          <div id="skillsAtGlance">
-            <div style={{ height: "5px", backgroundColor: "grey" }}>
-              <div style={{ backgroundColor: "blue", width: "55%" }}></div>
+              display: "flex",
+              flexDirection: "column"
+              // justifyContent: "space-between"
+              // gridTemplateRows: "1fr 2fr 2fr 1fr"
+            }}
+            className="flexBox"
+          >
+            <div
+              style={{
+                gridRow: "1/2",
+                display: "flex",
+                alignItems: "bottom"
+              }}
+            >
+              <h1 style={{ margin: "0" }}>Hi there, I am Sumanth Madishetty</h1>
             </div>
-            <div style={{ height: "5px", backgroundColor: "grey" }}>React</div>
-            <div style={{ height: "5px", backgroundColor: "grey" }}>React</div>
-            <div style={{ height: "5px", backgroundColor: "grey" }}>React</div>
-            <div style={{ height: "5px", backgroundColor: "grey" }}>React</div>
+            <div
+              style={{
+                gridRow: "2/3",
+                display: "flex",
+                alignItems: "left",
+                textAlign: "left"
+              }}
+            >
+              {translations.personalInfo}
+            </div>
+            <div
+              id="personal Details"
+              style={{
+                gridRow: "3/4",
+                display: "grid",
+                gridTemplateColumns: "repeat(2, 1fr)",
+                textAlign: "left"
+              }}
+            >
+              {DATA.map(item => (
+                <div
+                  key={item.title}
+                  style={{ display: "flex", margin: "8px" }}
+                >
+                  <div>
+                    <img
+                      style={{ width: "15px", height: "15px" }}
+                      src={item.icon}
+                      alt={item.title}
+                    />
+                  </div>
+                  <div
+                    style={{
+                      fontWeight: "bolder",
+                      marginRight: "10px",
+                      marginLeft: "10px"
+                    }}
+                  >
+                    {item.title}
+                  </div>
+                  <div>{item.value}</div>
+                </div>
+              ))}
+            </div>
+            <div id="social details" style={{ gridRow: "4/5" }}>
+              <Fade big cascade>
+                <SocialIcons
+                  icon={linkedinWhite}
+                  hoveredIcon={linkedinBlack}
+                  href={translations.linkedinLink}
+                />
+              </Fade>
+            </div>
+          </div>
+
+          <div style={{ display: "grid", gridColumn: "3/4" }}>
+            <div id="skillsAtGlance">
+              <div style={{ height: "5px", backgroundColor: "grey" }}>
+                <div style={{ backgroundColor: "blue", width: "55%" }}></div>
+              </div>
+              <div style={{ height: "5px", backgroundColor: "grey" }}>
+                React
+              </div>
+              <div style={{ height: "5px", backgroundColor: "grey" }}>
+                React
+              </div>
+              <div style={{ height: "5px", backgroundColor: "grey" }}>
+                React
+              </div>
+              <div style={{ height: "5px", backgroundColor: "grey" }}>
+                React
+              </div>
+            </div>
           </div>
         </div>
+      </Fade>
+    );
+  }
+
+  function SocialIcons({ icon, hoveredIcon, href }) {
+    const [isActive, setActive] = React.useState(false);
+    return (
+      <div
+        onMouseEnter={() => setActive(true)}
+        onMouseLeave={() => setActive(false)}
+        style={{ width: "45px" }}
+      >
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <img
+            style={{ width: "40px", height: "40px" }}
+            src={isActive ? hoveredIcon : icon}
+            alt="asd"
+          />
+        </a>
       </div>
     );
   }

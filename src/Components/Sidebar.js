@@ -1,5 +1,6 @@
 import React from "react";
-import stackOverflow from "../assets/stackOverflow.png";
+// import stackOverflow from "../assets/stackOverflow.png";
+import { stackoverflowLogo } from "assets/Images";
 import ROUTES from "config/routes";
 import { navigate } from "@reach/router";
 
@@ -8,18 +9,18 @@ export default function SidebarGroup(props) {
   return (
     <Sidebar location={props.location}>
       <Sidebar.Item
-        icon={stackOverflow}
+        icon={stackoverflowLogo}
         title="About me"
         link={ROUTES.ABOUT_ME}
       />
       <Sidebar.Item
-        icon={stackOverflow}
+        icon={stackoverflowLogo}
         title="Education"
         link={ROUTES.EDUCATION}
       />
-      <Sidebar.Item icon={stackOverflow} title="Work" link={ROUTES.WORK} />
+      <Sidebar.Item icon={stackoverflowLogo} title="Work" link={ROUTES.WORK} />
       <Sidebar.Item
-        icon={stackOverflow}
+        icon={stackoverflowLogo}
         title="Contact Me"
         link={ROUTES.CONTACT_ME}
       />

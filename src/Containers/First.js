@@ -1,11 +1,12 @@
 import React from "react";
 import IconButton from "@material-ui/core/IconButton";
 import Badge from "@material-ui/core/Badge";
-import GithubIcon from "../assets/githubIcon.png";
-import stackOverflow from "../assets/stackOverflow.png";
-import MyPhoto from "../assets/myPhoto.JPG";
-
-import mainBackground from "../assets/mainBackground.jpg";
+import {
+  stackoverflowLogo,
+  githubLogo,
+  author,
+  mainBackground
+} from "assets/Images";
 
 // import NotificationsIcon from "@material-ui/icons/Notifications";
 // This container should contain
@@ -44,8 +45,8 @@ function TopBar() {
             gridRow: "1"
           }}
         >
-          <CustomIconButton icon={GithubIcon} />
-          <CustomIconButton icon={stackOverflow} />
+          <CustomIconButton icon={githubLogo} />
+          <CustomIconButton icon={stackoverflowLogo} />
         </div>
         <div
           style={{
@@ -91,7 +92,7 @@ function TopBar() {
       >
         <img
           style={{ width: "110px", height: "110px", borderRadius: "100px" }}
-          src={MyPhoto}
+          src={author}
           alt="myPhot"
         />
       </div>

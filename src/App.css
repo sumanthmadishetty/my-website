@@ -95,3 +95,7 @@ body {
     url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.ttf') format('truetype'),
     url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.svg#Neo Sans Std') format('svg');
 } */
+
+.flexBox > div {
+  margin-bottom: 25px;
+}
