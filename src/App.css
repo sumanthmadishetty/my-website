@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -19,4 +20,82 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: auto;
+}
+
+.sideBarItemContainer {
+  display: flex;
+  align-items: center;
+  padding-left: 30%;
+  cursor: pointer;
+  height: 60px;
+}
+
+.sideBarItemContainer > div {
+  font-style: italic;
+  margin: 5px;
+}
+
+.sideBarItemContainer:hover,
+.sideBarItemSelected {
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px grey;
+}
+
+.sideBarItemContainer:hover,
+.sideBarItemSelected > div {
+  color: black;
+}
+
+@media (max-width: 800px) {
+  .sideBarItemContainer > div {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .sideBarItemContainer > div {
+    font-size: 14px;
+  }
+}
+.notFoundContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 35px;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
+
+/* @font-face {
+  font-family: NeoSansStd;
+  src: url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.eot');
+  src: url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.woff2') format('woff2'),
+    url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.woff') format('woff'),
+    url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.ttf') format('truetype'),
+    url('//db.onlinewebfonts.com/t/eae734a8099f563be4380b01338ab3db.svg#Neo Sans Std') format('svg');
+} */
+
+.flexBox > div {
+  margin-bottom: 25px;
 }

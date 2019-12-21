@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import SuspenseFallback from "./Components/SuspenseFallback";
+import { Router } from "@reach/router";
+const Layout = React.lazy(() => import("./Components/Layout"));
+
+const AboutMe = props => {
+  return <div>Aboute me page</div>;
+};
+
+const Cheeppanu = props => {
+  return <div>Cheeppanu</div>;
+};
+
+const NotFound = props => {
+  return (
+    <div className="notFoundContainer">Oops Page Under Construction!!</div>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Suspense fallback={<SuspenseFallback />}>
+      <div className="App">
+        <Layout>
+          <Router primary={false}>
+            <AboutMe path="/" />
+            <Cheeppanu path="/education" />
+            <NotFound default />
+          </Router>
+        </Layout>
+      </div>
+    </React.Suspense>
   );
 }
 
