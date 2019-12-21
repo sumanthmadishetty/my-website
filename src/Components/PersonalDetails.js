@@ -34,6 +34,7 @@ function PersonalDetails() {
         gridTemplateColumns: "repeat(2, 1fr)",
         textAlign: "left"
       }}
+      className="contactDetails"
     >
       {DATA.map(item => (
         <div key={item.title} style={{ display: "flex", margin: "8px" }}>

@@ -23,8 +23,14 @@ export default function Layout(props) {
             </div>
             <div id="asd">
               <Fade big cascade>
-                <div style={styles.mainContainer}>
-                  <div style={styles.flexWrapper} className="flexBox">
+                <div
+                  style={styles.mainContainer}
+                  className="personalInfoWrapper"
+                >
+                  <div
+                    style={styles.flexWrapper}
+                    className="socialAndDescription"
+                  >
                     <div style={styles.headingContainer}>
                       <h1 style={{ margin: "0" }}>
                         Hi there, I am Sumanth Madishetty
@@ -40,7 +46,9 @@ export default function Layout(props) {
                 </div>
               </Fade>
             </div>
-            <Experience />
+            <div>
+              <Experience />
+            </div>
           </>
         );
       }}

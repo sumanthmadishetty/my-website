@@ -8,5 +8,6 @@ module.exports = {
   mainBackground: require("./mainBackground.jpg"),
   author: require("./author.JPG"),
   linkedinWhite: require("./linkedinWhite.png"),
-  linkedinBlack: require("./linkedinBlack.png")
+  linkedinBlack: require("./linkedinBlack.png"),
+  techsophyLogo: require("./techsophyLogo.jpg")
 };

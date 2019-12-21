@@ -10,6 +10,7 @@ function SkillsSection() {
         gridColumn: "3/3",
         gridTemplateRows: `${SKILLS_GLANCE_TITLE} auto`
       }}
+      className="skillsContainer"
     >
       <h1
         style={{
