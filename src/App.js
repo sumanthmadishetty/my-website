@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import SuspenseFallback from "./Components/SuspenseFallback";
 import { Router } from "@reach/router";

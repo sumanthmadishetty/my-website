@@ -1,12 +1,6 @@
 import React from "react";
 import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
-import {
-  stackoverflowLogo,
-  githubLogo,
-  author,
-  mainBackground
-} from "assets/Images";
+import { stackoverflowLogo, githubLogo, mainBackground } from "assets/Images";
 
 // import NotificationsIcon from "@material-ui/icons/Notifications";
 // This container should contain
@@ -76,28 +70,6 @@ function TopBar() {
       </div>
     </div>
   );
-
-  function renderPersonalImage() {
-    return (
-      <div
-        style={{
-          borderRadius: "100px",
-          width: "120px",
-          height: "120px",
-          backgroundColor: "white",
-          display: "inline-flex",
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-      >
-        <img
-          style={{ width: "110px", height: "110px", borderRadius: "100px" }}
-          src={author}
-          alt="myPhot"
-        />
-      </div>
-    );
-  }
 }
 
 function CustomIconButton({ icon, onClick }) {
@@ -116,19 +88,39 @@ function CustomIconButton({ icon, onClick }) {
 
 export default TopBar;
 
-{
-  /* <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            height: "100%"
-          }}
-        >
-          <div style={styles.topbarTitleStyles}>Sumanth Madishetty</div>
+// /* <div
+//           style={{
+//             display: "grid",
+//             gridTemplateColumns: "1fr 1fr",
+//             height: "100%"
+//           }}
+//         >
+//           <div style={styles.topbarTitleStyles}>Sumanth Madishetty</div>
 
-          <div style={{ display: "flex", gridColumn: "2" }}>
-            <div>Github Link</div>
-            <div>Stackoverflow Link</div>
-          </div>
-        </div> */
-}
+//           <div style={{ display: "flex", gridColumn: "2" }}>
+//             <div>Github Link</div>
+//             <div>Stackoverflow Link</div>
+//           </div>
+//         </div> */
+
+// function renderPersonalImage() {
+//   return (
+//     <div
+//       style={{
+//         borderRadius: "100px",
+//         width: "120px",
+//         height: "120px",
+//         backgroundColor: "white",
+//         display: "inline-flex",
+//         justifyContent: "center",
+//         alignItems: "center"
+//       }}
+//     >
+//       <img
+//         style={{ width: "110px", height: "110px", borderRadius: "100px" }}
+//         src={author}
+//         alt="myPhot"
+//       />
+//     </div>
+//   );
+// }
