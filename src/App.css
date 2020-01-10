@@ -164,7 +164,8 @@ body {
 
 .companyTenure {
   color: #757575;
-  padding-left: 15px;
+  /* padding-left: 15px; */
+  margin-top: 10px;
 }
 
 .companyDescriptionText {
@@ -177,8 +178,12 @@ p {
 }
 
 .projectDescription {
+  margin-top: 25px;
 }
 
 .projectData {
-  padding: 25px;
+  /* padding: 25px; */
+}
+
+.projectName {
 }

@@ -9,5 +9,9 @@ module.exports = {
   author: require("./author.JPG"),
   linkedinWhite: require("./linkedinWhite.png"),
   linkedinBlack: require("./linkedinBlack.png"),
-  techsophyLogo: require("./techsophyLogo.jpg")
+  techsophyLogo: require("./techsophyLogo.jpg"),
+  abhipaisaLogo: require("./abhipaisa-logo.png"),
+  fanduniyaLogo: require("./fanduniya-logo.png"),
+  tahakomLogo: require("./tahkom.png"),
+  bmsLogo: require("./visionplanner.png")
 };
