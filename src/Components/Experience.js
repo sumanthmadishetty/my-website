@@ -81,14 +81,15 @@ function Experience(props) {
         }}
       >
         <a
-          style={{ width: "max-content" }}
+          style={{ width: "max-content", textDecoration: "none" }}
           href="https://www.techsophy.com/"
           target="blank"
         >
           <p
             style={{
               fontWeight: "bold",
-              fontSize: "20px"
+              fontSize: "50px",
+              color: "#292961"
             }}
           >
             Techsophy
