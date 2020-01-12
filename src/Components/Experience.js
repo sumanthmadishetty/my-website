@@ -104,10 +104,8 @@ function Experience(props) {
 function renderCompanyDescription() {
   return (
     <div className="companyDescriptionText">
-      Also, reporting it manually increases the cost and consumes a lot of time
-      (which you can use for more important tasks). Most importantly, you
-      wouldn’t want mistakes in your accounts. right? This is where artificial
-      intelligence comes
+      Techsophy is a research consulting and product development company with
+      innovation, technology and engineering as the core.
     </div>
   );
 }

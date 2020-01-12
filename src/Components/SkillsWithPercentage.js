@@ -26,7 +26,7 @@ function SkillsSection() {
         <SkillsWithPercentage title={"Javascript"} percentage="55%" />
         <SkillsWithPercentage title={"React"} percentage="80%" />
         <SkillsWithPercentage title={"Ruby on Rails"} percentage="60%" />
-        <SkillsWithPercentage title={"Java"} percentage="40%" />
+        <SkillsWithPercentage title={"NodeJS"} percentage="70%" />
       </div>
     </div>
   );
