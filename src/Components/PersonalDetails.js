@@ -1,11 +1,16 @@
 import React from "react";
 import { calendar, mobileIcon, locationPin, envelope } from "assets/Images";
+import "App.css";
 
 const DATA = [
   {
     icon: envelope,
     title: "Email: ",
-    value: "sumanth5812@gmail.com"
+    value: (
+      <a href="mailto:sumanth5812@gmail.com" className="mailHover">
+        sumanth5812@gmail.com
+      </a>
+    )
   },
   {
     icon: calendar,
@@ -20,7 +25,11 @@ const DATA = [
   {
     icon: mobileIcon,
     title: "Mobile: ",
-    value: "+91-8099211177"
+    value: (
+      <a className="mailHover" href="tel:+918099211177">
+        +91-8099211177
+      </a>
+    )
   }
 ];
 

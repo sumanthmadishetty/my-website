@@ -102,6 +102,15 @@ body {
   margin-bottom: 25px;
 }
 
+.mailHover {
+  /* text-decoration: none; */
+  color: black;
+}
+
+.mailHover:hover {
+  text-decoration: underline !important;
+}
+
 @media (max-width: 900px) {
   .personalInfoWrapper {
     grid-template-rows: 1fr 1fr !important;

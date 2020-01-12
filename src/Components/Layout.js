@@ -1,5 +1,5 @@
 import React from "react";
-import { Location } from "@reach/router";
+// import { Location } from "@reach/router";
 import translations from "config/translations";
 import Fade from "react-reveal/Fade";
 import PersonalDetails from "./PersonalDetails";
@@ -7,7 +7,7 @@ import SocialIcons from "./SocialIcon";
 import SkillsSection from "./SkillsWithPercentage";
 import styles from "./layoutStyles";
 import Experience from "./Experience";
-import SkillSet from "./SkillSet";
+// import SkillSet from "./SkillSet";
 
 const TopBar = React.lazy(() => import("../Containers/First"));
 
