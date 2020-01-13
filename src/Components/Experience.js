@@ -174,7 +174,11 @@ function ProjectData({ websiteLink, logo, text, name }) {
         </a> */}
         <div className="projectData">
           <a href={websiteLink} target="blank">
-            <img src={logo} alt={name} />
+            <img
+              style={{ maxWidth: "100%", width: "250px" }}
+              src={logo}
+              alt={name}
+            />
           </a>
           <div className="projectDescription">{text}</div>
           <div style={{ margin: "10px 0px" }}></div>
