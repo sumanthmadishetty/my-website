@@ -111,6 +111,10 @@ body {
   text-decoration: underline !important;
 }
 
+.carretIcon {
+  align-self: center;
+}
+
 @media (max-width: 900px) {
   .personalInfoWrapper {
     grid-template-rows: 1fr 1fr !important;
@@ -119,6 +123,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .carretIcon {
+    width: 25px !important;
+    height: 25px !important;
+    align-self: center;
+    margin-left: 15px;
+  }
+
   .socialAndDescription {
     grid-row: 1;
     grid-column: 1;

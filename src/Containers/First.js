@@ -40,8 +40,8 @@ function TopBar() {
             gridRow: "1"
           }}
         >
-          <CustomIconButton icon={githubLogo} />
-          <CustomIconButton icon={stackoverflowLogo} />
+          {/* <CustomIconButton icon={githubLogo} />
+          <CustomIconButton icon={stackoverflowLogo} /> */}
         </div>
         <div
           style={{

@@ -17,5 +17,7 @@ module.exports = {
   abhipaisaLogo: require("./abhipaisa-logo.png"),
   fanduniyaLogo: require("./fanduniya-logo.png"),
   tahakomLogo: require("./tahkom.png"),
-  bmsLogo: require("./visionplanner.png")
+  bmsLogo: require("./visionplanner.png"),
+  carretDown: require("./carretDown.svg"),
+  carretUp: require("./carretUp.svg")
 };

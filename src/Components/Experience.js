@@ -9,7 +9,9 @@ import {
   abhipaisaLogo,
   fanduniyaLogo,
   tahakomLogo,
-  bmsLogo
+  bmsLogo,
+  carretDown,
+  carretUp
 } from "assets/Images";
 
 function Experience(props) {
@@ -58,6 +60,7 @@ function Experience(props) {
               </div>
               {renderCompanyNameAndTenure()}
               {renderCompanyDescription()}
+              {/* {renderDownArrow()} */}
             </div>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
@@ -65,6 +68,17 @@ function Experience(props) {
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
+    );
+  }
+
+  function renderDownArrow() {
+    return (
+      <img
+        style={{ width: "40px", height: "40px" }}
+        src={expanded === "asd" ? carretUp : carretDown}
+        alt="carretDown"
+        className="carretIcon"
+      />
     );
   }
 
@@ -80,21 +94,25 @@ function Experience(props) {
           gridColumn: "2"
         }}
       >
-        <a
-          style={{ width: "max-content", textDecoration: "none" }}
-          href="https://www.techsophy.com/"
-          target="blank"
-        >
-          <p
-            style={{
-              fontWeight: "bold",
-              fontSize: "50px",
-              color: "#292961"
-            }}
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <a
+            style={{ width: "max-content", textDecoration: "none" }}
+            href="https://www.techsophy.com/"
+            target="blank"
           >
-            Techsophy
-          </p>
-        </a>
+            <p
+              style={{
+                fontWeight: "bold",
+                fontSize: "50px",
+                color: "#292961"
+              }}
+            >
+              Techsophy
+            </p>
+          </a>
+          {renderDownArrow()}
+        </div>
+
         <p className="companyTenure">May 2018 - Present</p>
       </div>
     );
