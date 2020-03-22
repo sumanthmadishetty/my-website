@@ -1,6 +1,7 @@
 import React from "react";
 import IconButton from "@material-ui/core/IconButton";
 import { stackoverflowLogo, githubLogo, mainBackground } from "assets/Images";
+import Typist from "react-typist";
 
 // import NotificationsIcon from "@material-ui/icons/Notifications";
 // This container should contain
@@ -39,8 +40,8 @@ function TopBar() {
             gridRow: "1"
           }}
         >
-          <CustomIconButton icon={githubLogo} />
-          <CustomIconButton icon={stackoverflowLogo} />
+          {/* <CustomIconButton icon={githubLogo} />
+          <CustomIconButton icon={stackoverflowLogo} /> */}
         </div>
         <div
           style={{
@@ -55,16 +56,18 @@ function TopBar() {
           <div
             style={{ display: "flex", flexDirection: "column", color: "white" }}
           >
-            <div
-              id="titleHeaidng"
-              style={{ fontSize: "35px" }}
-            >{`Hie & Welcome`}</div>
-            <div
-              id="titleHeaidng"
-              style={{ fontSize: "55px", fontWeight: "bolder" }}
-            >
-              I am Sumanth Madishetty
-            </div>
+            <Typist>
+              <div id="titleHeaidng" style={{ fontSize: "35px" }}>
+                <span>{`Hie & Welcome`}</span>
+                <Typist.Delay ms={300}></Typist.Delay>
+              </div>
+              <span
+                id="titleHeaidng"
+                style={{ fontSize: "55px", fontWeight: "bolder" }}
+              >
+                I am Sumanth Madishetty
+              </span>
+            </Typist>
           </div>
         </div>
       </div>

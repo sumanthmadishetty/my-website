@@ -4,12 +4,12 @@ module.exports = {
     gridTemplateColumns: "1fr 3fr 3fr 1fr",
     paddingTop: "20px",
     paddingBottom: "20px",
-    height: "300px",
+    // height: "300px",
     gridGap: "25px"
   },
   flexWrapper: {
     gridColumn: "2/3",
-    height: "300px",
+    // height: "300px",
 
     display: "flex",
     flexDirection: "column"
